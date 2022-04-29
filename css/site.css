@@ -6,9 +6,24 @@ body{
 h1{
     color: #ffffff;
     text-align: center;
-    text-shadow: 3px 3px #000000;
+    text-shadow: 2px 2px #000000;
+}
+h2{
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+}
+#dealerTotal{
+    color: #df0000;
 }
 
+#dealerBlackjackBanner{
+    color: #87cefa;
+}
+
+#dealerBustBanner{
+    color: #29475e;
+}
 .dealerBox{
     border: 5px solid #ffffff;
     margin: auto;
