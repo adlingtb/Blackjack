@@ -1,0 +1,17 @@
+body{
+    background-image: url("../img/background.jpg");
+    background-size: 250px;
+}
+
+h1{
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 3px 3px #000000;
+}
+
+.dealerBox{
+    border: 5px solid #ffffff;
+    margin: auto;
+    height: 30%;
+    width: 70%;
+}
