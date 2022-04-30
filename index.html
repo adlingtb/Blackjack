@@ -15,11 +15,21 @@
     <h2>Dealer's Cards: <strong id="dealerTotal"></strong></h2>
     <h1 style="display: none" id="dealerBlackjackBanner">BLACKJACK!</h1>
     <h1 style="display: none" id="dealerBustBanner">BUST!</h1>
-    <div class="dealerCards" id="dealerCards"></div>
+    <div id="dealerCards"></div>
+</div>
+
+<div class="playerBox">
+    <h2>Your Cards: <strong id="playerTotal"></strong></h2>
+    <h1 style="display: none" id="playerBlackjackBanner">BLACKJACK!</h1>
+    <h1 style="display: none" id="playerBustBanner">BUST!</h1>
+    <div id="playerCards"></div>
+    <a class="btn btn-primary" onclick="hit()">Hit</a>
+    <a class="btn btn-primary" onclick="stand()">Stand</a>
+
 </div>
 
 
-<a class="btn btn-primary" onclick="newGame(); console.log('click')">Play</a>
+<a class="btn btn-primary" onclick="newGame(); dealerDefault()">Play</a>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/cards.js"></script>

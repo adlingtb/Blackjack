@@ -24,7 +24,28 @@ h2{
 #dealerBustBanner{
     color: #29475e;
 }
+
+#playerTotal{
+    color: #df0000;
+}
+
+#playerBlackjackBanner{
+    color: #87cefa;
+}
+
+#playerBustBanner{
+    color: #29475e;
+}
+
 .dealerBox{
+    border: 5px solid #ffffff;
+    margin: auto auto 40px auto;
+    height: 30%;
+    width: 70%;
+
+}
+
+.playerBox{
     border: 5px solid #ffffff;
     margin: auto;
     height: 30%;
