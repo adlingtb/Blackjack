@@ -9,10 +9,23 @@ function Card(val, img, isAce) {
 }
 
 
+function resetGame(){
+    document.getElementById("dealerCards").innerHTML = "";
+    dealerTotal = 0;
+    document.getElementById("dealerBlackjackBanner").style.display = 'none';
+    document.getElementById("dealerBustBanner").style.display = 'none';
 
+}
+
+function dealerDefault(){
+    dealCardDealer("img/cards/back.svg");
+    dealCardDealer("img/cards/back.svg");
+}
 
 function newGame(){
     createObj();
+    resetGame();
+
     while(dealerTotal < 17){
         dealDealer();
     }

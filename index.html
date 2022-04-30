@@ -9,17 +9,17 @@
 
 
 </head>
-<body onload="newGame()">
+<body onload="dealerDefault()">
 <h1>Blackjack!</h1>
 <div class="dealerBox">
     <h2>Dealer's Cards: <strong id="dealerTotal"></strong></h2>
     <h1 style="display: none" id="dealerBlackjackBanner">BLACKJACK!</h1>
     <h1 style="display: none" id="dealerBustBanner">BUST!</h1>
     <div class="dealerCards" id="dealerCards"></div>
-
-
 </div>
 
+
+<a class="btn btn-primary" onclick="newGame(); console.log('click')">Play</a>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/cards.js"></script>
