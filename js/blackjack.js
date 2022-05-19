@@ -79,6 +79,8 @@ function stand(){
     document.getElementById("hit").style.display = "none";
     document.getElementById("stand").style.display = "none";
 
+    document.getElementById("finalScore").innerText = playerTotal;
+
     if(playerTotal === dealerTotal){
         document.getElementById("popupBody").style.display = "flex";
         document.getElementById("popupTitle").innerText = "Push! You Lose!";
