@@ -9,12 +9,29 @@
 
 
 </head>
-<body onload="dealerDefault()">
+<body onload="newGame(); dealerDefault(); ">
+
+<div id="popupBody" style="display: none" class="row h-100 popupParent">
+    <div class="col-sm-12 my-auto">
+        <div class="w-25 mx-auto popup">
+            <div class="justify-content-center" >
+                <h1 id="popupTitle"></h1>
+                <a class="btn gameBtn text-white" style="width: 50%" onclick="newGame(); dealerDefault()">Play Again</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <h1>Blackjack!</h1>
+<div class="row justify-content-center">
+    <a style="display: none" class="btn btn-primary gameBtn center" id="reset" onclick="newGame(); dealerDefault()">Reset</a>
+</div>
+
 <div class="dealerBox">
     <h2>Dealer's Cards: <strong id="dealerTotal"></strong></h2>
-    <h1 style="display: none" id="dealerBlackjackBanner">BLACKJACK!</h1>
-    <h1 style="display: none" id="dealerBustBanner">BUST!</h1>
+    <h1 style="display: none" id="dealerBlackjackBanner">DEALER BLACKJACK!</h1>
+    <h1 style="display: none" id="dealerBustBanner">DEALER BUST!</h1>
     <div id="dealerCards"></div>
 </div>
 
@@ -23,16 +40,18 @@
     <h1 style="display: none" id="playerBlackjackBanner">BLACKJACK!</h1>
     <h1 style="display: none" id="playerBustBanner">BUST!</h1>
     <div id="playerCards"></div>
-    <a class="btn btn-primary" onclick="hit()">Hit</a>
-    <a class="btn btn-primary" onclick="stand()">Stand</a>
-
+    <div class="row justify-content-center">
+        <a class="btn btn-primary gameBtn" id="hit" onclick="hit(); showReset(); ">Hit</a>
+        <a class="btn btn-primary gameBtn" id="stand" onclick="stand()">Stand</a>
+    </div>
 </div>
 
 
-<a class="btn btn-primary" onclick="newGame(); dealerDefault()">Play</a>
+
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/cards.js"></script>
 <script src="js/blackjack.js"></script>
+
 </body>
 </html>

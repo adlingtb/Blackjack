@@ -21,6 +21,14 @@ function resetGame(){
     playerTotal = 0;
     document.getElementById("playerBlackjackBanner").style.display = 'none';
     document.getElementById("playerBustBanner").style.display = 'none';
+
+
+    document.getElementById("dealerTotal").innerHTML = dealerTotal.toString();
+    document.getElementById("playerTotal").innerHTML = playerTotal.toString();
+
+    document.getElementById("hit").style.display = "block";
+    document.getElementById("stand").style.display = "block";
+
 }
 
 function dealerDefault(){
@@ -31,19 +39,27 @@ function dealerDefault(){
 function newGame(){
     createObj();
     resetGame();
+    document.getElementById("popupBody").style.display = "none";
 
 
 }
+
+function showReset(){
+    document.getElementById("reset").style.display = "block";
+}
+
 
 function hit(){
     dealPlayer();
     if(playerTotal === 21){
         document.getElementById("playerBlackjackBanner").style.display = 'block'
         console.log("blackjack")
+        stand();
     }
     if(playerTotal >21){
         document.getElementById("playerBustBanner").style.display = 'block'
         console.log("bust")
+        stand();
     }
 }
 function stand(){
@@ -58,6 +74,30 @@ function stand(){
     if(dealerTotal >21){
         document.getElementById("dealerBustBanner").style.display = 'block'
         console.log("bust")
+    }
+
+    document.getElementById("hit").style.display = "none";
+    document.getElementById("stand").style.display = "none";
+
+    if(playerTotal === dealerTotal){
+        document.getElementById("popupBody").style.display = "flex";
+        document.getElementById("popupTitle").innerText = "Push! You Lose!";
+    }else if(playerTotal === 21 && dealerTotal !== 21){
+        document.getElementById("popupBody").style.display = "flex";
+        document.getElementById("popupTitle").innerText = "Blackjack! You Win!";
+    }else if(playerTotal > dealerTotal && playerTotal<21){
+        document.getElementById("popupBody").style.display = "flex";
+        document.getElementById("popupTitle").innerText = "You Win!";
+    }else if(dealerTotal>21 && playerTotal<21) {
+        document.getElementById("popupBody").style.display = "flex";
+        document.getElementById("popupTitle").innerText = "Dealer Bust! You Win!";
+    }else if(playerTotal>21){
+        document.getElementById("popupBody").style.display = "flex";
+        document.getElementById("popupTitle").innerText = "Bust! You Lose!";
+    }
+    else{
+        document.getElementById("popupBody").style.display = "flex";
+        document.getElementById("popupTitle").innerText = "You Lose!";
     }
 }
 

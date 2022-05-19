@@ -37,6 +37,18 @@ h2{
     color: #29475e;
 }
 
+.gameBtn{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+
+    border: 3px solid white;
+    margin: 10px;
+
+    width: 100px;
+}
+
+
+
 .dealerBox{
     border: 5px solid #ffffff;
     margin: auto auto 40px auto;
@@ -50,4 +62,17 @@ h2{
     margin: auto;
     height: 30%;
     width: 70%;
+}
+
+.popupParent{
+    z-index:100; position: fixed; width: 100%; height: 100%
+}
+
+.popup{
+    background-color: #87cefa;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+}
+#popupTitle{
+    margin: 10px;
 }
